@@ -1,0 +1,249 @@
+*{
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+
+  /* Navbar */
+  .navbar {
+    padding: 0 16px;
+    height: 56px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .nav-buttons {
+    gap: 8px;
+  }
+
+  .btn-primary, .btn-outline {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .nav-avatar {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  /* Bosh sahifa */
+  .hero {
+    padding: 48px 16px;
+  }
+
+  .hero h2 {
+    font-size: 26px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .courses {
+    padding: 0 16px 48px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* Kurslar sahifasi */
+  .courses-page {
+    padding: 24px 16px;
+  }
+
+  .categories {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 8px;
+  }
+
+  .cat-btn {
+    flex-shrink: 0;
+  }
+
+  /* Kurs detail */
+  .detail-page {
+    padding: 20px 16px;
+  }
+
+  .detail-header {
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .detail-emoji {
+    font-size: 48px;
+  }
+
+  .detail-title {
+    font-size: 22px;
+  }
+
+  .detail-body {
+    grid-template-columns: 1fr;
+  }
+
+  .enroll-box {
+    position: static;
+  }
+
+  /* Dashboard */
+  .dashboard-page {
+    padding: 20px 16px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .profile-card {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .enrolled-card {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  /* Auth sahifalar */
+  .auth-card {
+    padding: 28px 20px;
+    margin: 16px;
+  }
+
+  /* Profil */
+  .profile-page {
+    padding: 20px 16px;
+  }
+
+  /* Admin */
+  .admin-layout {
+    flex-direction: column;
+  }
+
+  .admin-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #f3f4f6;
+    padding: 12px 0;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 4px;
+  }
+
+  .sidebar-item {
+    flex-shrink: 0;
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  .sidebar-logo {
+    display: none;
+  }
+
+  .sidebar-logout {
+    display: none;
+  }
+
+  .admin-main {
+    padding: 16px;
+  }
+
+  .stat-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-table th:nth-child(1),
+  .admin-table td:nth-child(1) {
+    display: none;
+  }
+
+  /* Quiz */
+  .quiz-page {
+    padding: 20px 16px;
+  }
+
+  .quiz-card {
+    padding: 24px 16px;
+  }
+
+  .quiz-question {
+    font-size: 17px;
+  }
+
+  .result-actions {
+    flex-direction: column;
+  }
+
+  /* Sertifikat */
+  .cert-card {
+    padding: 32px 20px;
+  }
+
+  .cert-name {
+    font-size: 26px;
+  }
+
+  .cert-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  /* Bildirishnoma */
+  .notif-container {
+    right: 12px;
+    left: 12px;
+    max-width: 100%;
+  }
+
+  /* Modal */
+  .modal {
+    margin: 16px;
+    padding: 24px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 22px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cert-footer {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .detail-meta {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .table-actions {
+    flex-direction: column;
+  }
+}

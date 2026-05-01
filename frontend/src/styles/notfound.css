@@ -1,0 +1,275 @@
+.notfound-page {
+  min-height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.notfound-bg-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 60%);
+  pointer-events: none;
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.1); }
+}
+
+.notfound-container {
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* 404 raqam */
+.notfound-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.num-4 {
+  font-size: 180px;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--primary-light), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  letter-spacing: -8px;
+  animation: bounceNum 2s ease-in-out infinite;
+}
+
+.num-4:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes bounceNum {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.num-ghost {
+  width: 160px;
+  height: 160px;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(14, 165, 233, 0.15));
+  border: 2px solid var(--border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-light);
+  animation: floatGhost 3s ease-in-out infinite;
+  box-shadow: 0 16px 40px rgba(139, 92, 246, 0.25);
+}
+
+@keyframes floatGhost {
+  0%, 100% { transform: translateY(0) rotate(-5deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+/* Xabar */
+.notfound-message {
+  margin-bottom: 40px;
+}
+
+.notfound-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(239, 68, 68, 0.12);
+  color: var(--danger);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.notfound-message h1 {
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 14px;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.notfound-message p {
+  font-size: 17px;
+  color: var(--text-soft);
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Tugmalar */
+.notfound-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+/* Tezkor havolalar */
+.notfound-quick {
+  padding-top: 40px;
+  border-top: 1px dashed var(--border);
+}
+
+.quick-title {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.quick-links {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.quick-link {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 16px 24px;
+  border-radius: 16px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s;
+  min-width: 120px;
+  color: var(--text);
+  font-family: inherit;
+}
+
+.quick-link:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+  box-shadow: 0 12px 24px rgba(139, 92, 246, 0.15);
+}
+
+.quick-icon {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(14, 165, 233, 0.15));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-light);
+  transition: all 0.3s;
+}
+
+.quick-link:hover .quick-icon {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  transform: scale(1.1);
+}
+
+.quick-link span {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Dekorativ shakllar */
+.nf-shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.nf-shape-1 {
+  width: 200px;
+  height: 200px;
+  top: 10%;
+  left: 10%;
+  background: linear-gradient(135deg, #8b5cf6, #a78bfa);
+  animation: floatShape 6s ease-in-out infinite;
+}
+
+.nf-shape-2 {
+  width: 150px;
+  height: 150px;
+  top: 20%;
+  right: 10%;
+  background: linear-gradient(135deg, #0ea5e9, #60a5fa);
+  animation: floatShape 6s ease-in-out infinite 2s;
+}
+
+.nf-shape-3 {
+  width: 120px;
+  height: 120px;
+  bottom: 10%;
+  left: 20%;
+  background: linear-gradient(135deg, #f59e0b, #fbbf24);
+  animation: floatShape 6s ease-in-out infinite 4s;
+}
+
+@keyframes floatShape {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(20px, -30px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .num-4 {
+    font-size: 100px;
+    letter-spacing: -4px;
+  }
+
+  .num-ghost {
+    width: 100px;
+    height: 100px;
+  }
+
+  .num-ghost svg {
+    width: 60px;
+    height: 60px;
+  }
+
+  .notfound-number {
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .notfound-message h1 {
+    font-size: 26px;
+  }
+
+  .notfound-message p {
+    font-size: 15px;
+  }
+
+  .quick-links {
+    gap: 10px;
+  }
+
+  .quick-link {
+    min-width: 90px;
+    padding: 14px 18px;
+  }
+}

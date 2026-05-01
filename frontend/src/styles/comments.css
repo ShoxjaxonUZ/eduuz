@@ -1,0 +1,249 @@
+.comments-section {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 28px;
+}
+
+.comments-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.comments-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+}
+
+.comments-title h3 {
+  font-size: 19px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.comments-count {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-left: 4px;
+}
+
+/* Izoh qoldirish formasi */
+.comment-form {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.comment-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.comment-form-wrap {
+  flex: 1;
+  background: var(--bg-soft);
+  border: 2px solid var(--border);
+  border-radius: 16px;
+  padding: 4px;
+  transition: border-color 0.2s;
+}
+
+.comment-form-wrap:focus-within {
+  border-color: var(--primary);
+}
+
+.comment-form-wrap textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 12px 16px;
+  font-size: 14px;
+  color: var(--text);
+  outline: none;
+  resize: none;
+  font-family: inherit;
+  line-height: 1.6;
+  min-height: 70px;
+}
+
+.comment-form-wrap textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.comment-form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 12px 8px;
+  border-top: 1px solid var(--border);
+}
+
+.comment-form-hint {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.comment-submit {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px !important;
+  font-size: 13px !important;
+}
+
+/* Login prompt */
+.comment-login-prompt {
+  background: var(--bg-soft);
+  border: 1px dashed var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  text-align: center;
+  margin-bottom: 24px;
+  color: var(--text-muted);
+}
+
+.comment-login-prompt svg {
+  margin-bottom: 10px;
+  color: var(--primary-light);
+}
+
+.comment-login-prompt p {
+  color: var(--text);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Izohlar ro'yxati */
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.comment-item {
+  display: flex;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 16px;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  transition: all 0.2s;
+}
+
+.comment-item:hover {
+  border-color: var(--border-hover);
+  background: var(--card);
+}
+
+.comment-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.comment-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+  gap: 10px;
+}
+
+.comment-author {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.comment-date {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.comment-delete {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.comment-delete:hover {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--danger);
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.comment-text {
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.6;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+/* Empty state */
+.comments-empty {
+  text-align: center;
+  padding: 48px 20px;
+  color: var(--text-muted);
+}
+
+.comments-empty svg {
+  opacity: 0.3;
+  margin-bottom: 12px;
+}
+
+.comments-empty p {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.comments-empty span {
+  font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .comments-section {
+    padding: 20px;
+  }
+
+  .comment-form {
+    gap: 10px;
+  }
+
+  .comment-avatar {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+}
